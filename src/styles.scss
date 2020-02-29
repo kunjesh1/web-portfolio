@@ -1,1 +1,665 @@
 /* You can add global styles to this file, and also import other style files */
+body,
+html {
+  height: 100%;
+  margin: 0 !important;
+  scroll-behavior: smooth;
+}
+
+/* Main */
+
+#main {
+  padding: 0em 0 6em 0;
+}
+
+@media screen and (max-width: 736px) {
+  #main {
+    padding: 0em 0 4em 0;
+  }
+}
+
+/* Type */
+
+body,
+input,
+select,
+textarea {
+  color: #ffffff;
+  font-family: "Source Sans Pro", Helvetica, sans-serif;
+  font-size: 17pt;
+  font-weight: 300;
+  letter-spacing: 0.025em;
+  line-height: 1.65;
+}
+
+@media screen and (max-width: 1680px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 14pt;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 12pt;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  body,
+  input,
+  select,
+  textarea {
+    font-size: 11pt;
+  }
+}
+
+a {
+  -moz-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  -webkit-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  -ms-transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out, border-bottom-color 0.2s ease-in-out;
+  border-bottom: dotted 1px;
+  color: inherit;
+  text-decoration: none;
+}
+
+a:hover {
+  border-bottom-color: transparent;
+  color: #9bf1ff !important;
+}
+
+a:active {
+  color: #53e3fb !important;
+}
+
+strong,
+b {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+em,
+i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 2em 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: #ffffff;
+  font-weight: 600;
+  line-height: 1.65;
+  margin: 0 0 1em 0;
+}
+
+h1 a,
+h2 a,
+h3 a,
+h4 a,
+h5 a,
+h6 a {
+  color: inherit;
+  border-bottom: 0;
+}
+
+h1 {
+  font-size: 2.5em;
+}
+
+h2 {
+  font-size: 1.75em;
+}
+
+h3 {
+  font-size: 1.35em;
+}
+
+h4 {
+  font-size: 1.1em;
+}
+
+h5 {
+  font-size: 0.9em;
+}
+
+h6 {
+  font-size: 0.7em;
+}
+
+@media screen and (max-width: 736px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  h3 {
+    font-size: 1.25em;
+  }
+}
+
+sub {
+  font-size: 0.8em;
+  position: relative;
+  top: 0.5em;
+}
+
+sup {
+  font-size: 0.8em;
+  position: relative;
+  top: -0.5em;
+}
+
+blockquote {
+  border-left: solid 4px rgba(212, 212, 255, 0.1);
+  font-style: italic;
+  margin: 0 0 2em 0;
+  padding: 0.5em 0 0.5em 2em;
+}
+
+code {
+  background: rgba(212, 212, 255, 0.035);
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0.25em;
+  padding: 0.25em 0.65em;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: "Courier New", monospace;
+  font-size: 0.9em;
+  margin: 0 0 2em 0;
+}
+
+pre code {
+  display: block;
+  line-height: 1.75;
+  padding: 1em 1.5em;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 1px rgba(212, 212, 255, 0.1);
+  margin: 2em 0;
+}
+
+hr.major {
+  margin: 3em 0;
+}
+
+.align-left {
+  text-align: left;
+}
+
+.align-center {
+  text-align: center;
+}
+
+.align-right {
+  text-align: right;
+}
+
+/*Buttons*/
+
+.button {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border: 0;
+  border-radius: 0;
+  box-shadow: inset 0 0 0 2px #ffffff;
+  color: #ffffff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  height: 3.5em;
+  letter-spacing: 0.25em;
+  line-height: 3.5em;
+  padding: 0 1.75em;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+button:hover,
+button:active,
+.button:hover,
+.button:active {
+  box-shadow: inset 0 0 0 2px #9bf1ff;
+  color: #9bf1ff;
+}
+
+button:active,
+.button:active {
+  background-color: rgba(155, 241, 255, 0.1);
+  box-shadow: inset 0 0 0 2px #53e3fb;
+  color: #53e3fb;
+}
+
+button.icon:before,
+.button.icon:before {
+  margin-right: 0.5em;
+}
+
+input[type="submit"].fit,
+input[type="reset"].fit,
+input[type="button"].fit,
+button.fit,
+.button.fit {
+  width: 100%;
+}
+
+input[type="submit"].small,
+input[type="reset"].small,
+input[type="button"].small,
+button.small,
+.button.small {
+  font-size: 0.6em;
+}
+
+input[type="submit"].large,
+input[type="reset"].large,
+input[type="button"].large,
+button.large,
+.button.large {
+  font-size: 1.25em;
+  height: 3em;
+  line-height: 3em;
+}
+
+input[type="submit"].next,
+input[type="reset"].next,
+input[type="button"].next,
+button.next,
+.button.next {
+  padding-right: 4.5em;
+  position: relative;
+}
+
+input[type="submit"].next:before,
+input[type="submit"].next:after,
+input[type="reset"].next:before,
+input[type="reset"].next:after,
+input[type="button"].next:before,
+input[type="button"].next:after,
+button.next:before,
+button.next:after,
+.button.next:before,
+.button.next:after {
+  -moz-transition: opacity 0.2s ease-in-out;
+  -webkit-transition: opacity 0.2s ease-in-out;
+  -ms-transition: opacity 0.2s ease-in-out;
+  transition: opacity 0.2s ease-in-out;
+  background-position: center right;
+  background-repeat: no-repeat;
+  background-size: 36px 24px;
+  content: "";
+  display: block;
+  height: 100%;
+  position: absolute;
+  right: 1.5em;
+  top: 0;
+  vertical-align: middle;
+  width: 36px;
+}
+
+.button.next:before {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %23ffffff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+}
+
+.button.next:after {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' width='36px' height='24px' viewBox='0 0 36 24' zoomAndPan='disable'%3E%3Cstyle%3Eline %7B stroke: %239bf1ff%3B stroke-width: 2px%3B %7D%3C/style%3E%3Cline x1='0' y1='12' x2='34' y2='12' /%3E%3Cline x1='25' y1='4' x2='34' y2='12.5' /%3E%3Cline x1='25' y1='20' x2='34' y2='11.5' /%3E%3C/svg%3E");
+  opacity: 0;
+  z-index: 1;
+}
+
+input[type="submit"].next:hover:after,
+input[type="submit"].next:active:after,
+input[type="reset"].next:hover:after,
+input[type="reset"].next:active:after,
+input[type="button"].next:hover:after,
+input[type="button"].next:active:after,
+button.next:hover:after,
+button.next:active:after,
+.button.next:hover:after,
+.button.next:active:after {
+  opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  input[type="submit"].next,
+  input[type="reset"].next,
+  input[type="button"].next,
+  button.next,
+  .button.next {
+    padding-right: 5em;
+  }
+}
+
+input[type="submit"].primary,
+input[type="reset"].primary,
+input[type="button"].primary,
+button.primary,
+.button.primary {
+  background-color: #ffffff;
+  box-shadow: none;
+  color: #242943;
+}
+
+input[type="submit"].primary:hover,
+input[type="submit"].primary:active,
+input[type="reset"].primary:hover,
+input[type="reset"].primary:active,
+input[type="button"].primary:hover,
+input[type="button"].primary:active,
+button.primary:hover,
+button.primary:active,
+.button.primary:hover,
+.button.primary:active {
+  background-color: #9bf1ff;
+  color: #242943 !important;
+}
+
+input[type="submit"].primary:active,
+input[type="reset"].primary:active,
+input[type="button"].primary:active,
+button.primary:active,
+.button.primary:active {
+  background-color: #53e3fb;
+}
+
+input[type="submit"].disabled,
+input[type="submit"]:disabled,
+input[type="reset"].disabled,
+input[type="reset"]:disabled,
+input[type="button"].disabled,
+input[type="button"]:disabled,
+button.disabled,
+button:disabled,
+.button.disabled,
+.button:disabled {
+  pointer-events: none;
+  cursor: default;
+  opacity: 0.25;
+}
+
+/*section*/
+.tiles {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  position: relative;
+  margin: -2.5em 0 0 -2.5em;
+}
+
+.tiles article {
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  position: relative;
+  width: calc(33.33333% - 2.5em);
+  margin: 2.5em 0 0 2.5em;
+}
+
+.tiles article > .image {
+  -moz-transition: -moz-transform 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  position: relative;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.tiles article > .image img {
+  display: block;
+  width: 100%;
+}
+
+.tiles article > .image:before {
+  pointer-events: none;
+  -moz-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, opacity 0.5s ease;
+  -ms-transition: background-color 0.5s ease, opacity 0.5s ease;
+  transition: background-color 0.5s ease, opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  z-index: 1;
+  opacity: 0.8;
+}
+
+.tiles article > .image:after {
+  pointer-events: none;
+  -moz-transition: opacity 0.5s ease;
+  -webkit-transition: opacity 0.5s ease;
+  -ms-transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease;
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100' height='100' viewBox='0 0 100 100' preserveAspectRatio='none'%3E%3Cstyle%3Eline %7B stroke-width: 0.25px%3B stroke: %23ffffff%3B %7D%3C/style%3E%3Cline x1='0' y1='0' x2='100' y2='100' /%3E%3Cline x1='100' y1='0' x2='0' y2='100' /%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  opacity: 0.25;
+  z-index: 2;
+}
+
+.tiles article > a {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-align-items: center;
+  -webkit-align-items: center;
+  -ms-align-items: center;
+  align-items: center;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -moz-transition: background-color 0.5s ease, -moz-transform 0.5s ease;
+  -webkit-transition: background-color 0.5s ease, -webkit-transform 0.5s ease;
+  -ms-transition: background-color 0.5s ease, -ms-transform 0.5s ease;
+  transition: background-color 0.5s ease, transform 0.5s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 1em;
+  border-radius: 4px;
+  border-bottom: 0;
+  color: #ffffff;
+  text-align: center;
+  text-decoration: none;
+  z-index: 3;
+}
+
+.tiles article > a > :last-child {
+  margin: 0;
+}
+
+.tiles article > a:hover {
+  color: #ffffff !important;
+}
+
+.tiles article > a h2 {
+  margin: 0;
+}
+
+.tiles article > a .content {
+  -moz-transition: max-height 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: max-height 0.5s ease, opacity 0.5s ease;
+  -ms-transition: max-height 0.5s ease, opacity 0.5s ease;
+  transition: max-height 0.5s ease, opacity 0.5s ease;
+  width: 100%;
+  max-height: 0;
+  line-height: 1.5;
+  margin-top: 0.35em;
+  opacity: 0;
+}
+
+.tiles article > a .content > :last-child {
+  margin-bottom: 0;
+}
+
+.tiles article.style1 > .image:before {
+  background-color: #f2849e;
+}
+
+.tiles article.style2 > .image:before {
+  background-color: #7ecaf6;
+}
+
+.tiles article.style3 > .image:before {
+  background-color: #7bd0c1;
+}
+
+.tiles article.style4 > .image:before {
+  background-color: #c75b9b;
+}
+
+.tiles article.style5 > .image:before {
+  background-color: #ae85ca;
+}
+
+.tiles article.style6 > .image:before {
+  background-color: #8499e7;
+}
+
+body:not(.is-touch) .tiles article:hover > .image {
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
+}
+
+body:not(.is-touch) .tiles article:hover > .image:before {
+  background-color: #333333;
+  opacity: 0.35;
+}
+
+body:not(.is-touch) .tiles article:hover > .image:after {
+  opacity: 0;
+}
+
+body:not(.is-touch) .tiles article:hover .content {
+  max-height: 15em;
+  opacity: 1;
+}
+
+* + .tiles {
+  margin-top: 2em;
+}
+
+body.is-preload .tiles article {
+  -moz-transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  transform: scale(0.9);
+  opacity: 0;
+}
+
+body.is-touch .tiles article .content {
+  max-height: 15em;
+  opacity: 1;
+}
+
+@media screen and (max-width: 1280px) {
+  .tiles {
+    margin: -1.25em 0 0 -1.25em;
+  }
+
+  .tiles article {
+    width: calc(33.33333% - 1.25em);
+    margin: 1.25em 0 0 1.25em;
+  }
+}
+
+@media screen and (max-width: 980px) {
+  .tiles {
+    margin: -2.5em 0 0 -2.5em;
+  }
+
+  .tiles article {
+    width: calc(50% - 2.5em);
+    margin: 2.5em 0 0 2.5em;
+  }
+}
+
+@media screen and (max-width: 736px) {
+  .tiles {
+    margin: -1.25em 0 0 -1.25em;
+  }
+
+  .tiles article {
+    width: calc(50% - 1.25em);
+    margin: 1.25em 0 0 1.25em;
+  }
+
+  .tiles article:hover > .image {
+    -moz-transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .tiles {
+    margin: 0;
+  }
+
+  .tiles article {
+    width: 100%;
+    margin: 1.25em 0 0 0;
+  }
+}
